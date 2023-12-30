@@ -11,7 +11,7 @@ h1 {
     position: absolute;
 }
 
-img {
+.profile {
      width: 130px;
     border-radius: 15px 50px 30px 5px;
     border-style: solid;
@@ -21,7 +21,7 @@ img {
     margin-top: 20px;
 }
 
-h1, img {
+.profile, h1 {
     display: inline-block;
 }
  h2 {
@@ -125,3 +125,46 @@ h1, img {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     letter-spacing: 8px 
 }
+
+.images {
+    height: 30px;
+    display:inline-block;
+}
+
+a {
+    background-image: linear-gradient(
+      to right,
+      #54b3d6,
+      #54b3d6 50%,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding-top: 20px;
+    margin-left: 20%;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  a:before {
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  a:hover {
+   background-position: 0;
+  }
+  
+  a:hover::before {
+    width:100%;
+  }
