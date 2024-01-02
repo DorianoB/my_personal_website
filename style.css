@@ -1,18 +1,31 @@
-body {
-    background-image: linear-gradient(to right, beige 0%, beige 30%, hsl(164, 61%, 65%) 50%, hsl(164, 61%, 65%) 100%)
-}
+/* To adjust everything the first version I started using margin, somehow I couldn't do the padding for the borders, I changed everything
+from margin to position relative,left, and now I can edit the padding. */
+
+/* * {  
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}  */
+
+/* body {  
+    background-image: linear-gradient(to right, beige 0%, beige 30%, hsl(164, 61%, 65%) 50%, hsl(164, 61%, 65%) 100% )
+}  */
+
+ body {    
+    background-image: linear-gradient(45deg, beige 0%, beige 40%, hsl(164, 61%, 65%) 50%, hsl(164, 61%, 65%)100%)
+} 
 
 h1 {
     color: hsl(240, 33%, 77%);
     font-family: Brush Script MT;
-    font-size: 40px;
+    font-size: 45px;
     margin-top: 80px;
     margin-left: 30px;
     position: absolute;
 }
 
 .profile {
-     width: 130px;
+    width: 130px;
     border-radius: 15px 50px 30px 5px;
     border-style: solid;
     border-width: 4px;
@@ -27,8 +40,8 @@ h1 {
  h2 {
     font-family: Brush Script MT;
     font-size: 30px;
-    left: 40%;
-    margin-top: 40px;
+    /* position: relative; left: 20%; */
+    margin-top: 20px;
     margin-left: 20%;
  }
 
@@ -42,7 +55,9 @@ h1 {
     font-size: 30px;
     left: 40%;
     margin-top: 40px;
-    margin-left: 30%;
+    /* position: relative;left: 30%; */
+    /* margin-left: 30%; */
+    padding-left: 10%;
  }
 
  .cc {
@@ -64,10 +79,7 @@ h1 {
 
  li {
     line-height: 150%;
- }
-/* why does my padding here not work? */
- div {
-/* padding: 30px; */
+    list-style-type:circle;
  }
 
  .future {
@@ -75,31 +87,42 @@ h1 {
     font-size: 30px;
     left: 40%;
     margin-top: 40px;
-    margin-left: 52%;
+    margin-bottom: 40px;
+    padding-left: 30%;
+    /* position: relative;left: 54%; */
+    /* margin-left: 52%; */
  }
 
 #flex { 
-    padding-right: 30px;
+    /* tried to add margin-top:40px to be consistend but it doesen't work, added margin-bottom:40px in .future instead */
     border-style: solid;
     border-width: 3px;
     border-color:hsl(240, 33%, 77%) ; 
+    border-radius: 15px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-left: 30%;
+    /* margin-left: 30%; */
+    position: relative;left: 30%;
+    padding: 8px;
     letter-spacing: 8px 
 }
 
 #income {
-    margin-left: 20%;
+    /* margin-left: 20%; */
+    position: relative;left: 50%;
+    padding: 8px;
     border-style: solid; 
     border-width: 3px; 
     border-color:hsl(240, 33%, 77%) ; 
+    border-radius: 15px 50px 30px 5px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     letter-spacing: 8px 
 }
 
 #freedom {
-    margin-left: 52%; 
-    margin-right: 40%;
+    /* margin-left: 52%;  */
+    position: relative;left: 25%;
+    margin-right: 66%;
+    padding: 8px;
     border-style: solid;
     border-width: 3px; 
     border-color:hsl(240, 33%, 77%) ; 
@@ -109,26 +132,33 @@ h1 {
 }
 
 #challenge {
-    margin-left: 20%;
+    /* margin-left: 20%; */
+    position: relative;left: 20%;
+    padding: 8px;
     border-style: solid;
     border-width: 3px; 
     border-color:hsl(240, 33%, 77%) ; 
+    border-radius: 30px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     letter-spacing: 8px 
 }
 
 #skills {
-    margin-left: 32%;
+    /* margin-left: 32%; */
+    position: relative;left: 50%;
+    padding: 8px;
     border-style: solid;
     border-width: 3px; 
-    border-color:hsl(240, 33%, 77%) ; 
+    border-color:hsl(240, 33%, 77%);
+    border-radius: 5px; 
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     letter-spacing: 8px 
 }
 
-.images {
+div img { 
     height: 30px;
     display:inline-block;
+    margin-top: 20px;
 }
 
 a {
@@ -142,14 +172,15 @@ a {
     background-position: -100%;
     display: inline-block;
     padding-top: 20px;
-    margin-left: 20%;
-    position: relative;
+    padding-left: 25px;
+    padding-bottom: 15px;
+    position: relative;left: 40%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   
-  a:before {
+  a:before { 
     content: '';
     background: #54b3d6;
     display: block;
