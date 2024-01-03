@@ -1,11 +1,7 @@
-/* To adjust everything the first version I started using margin, somehow I couldn't do the padding for the borders, I changed everything
-from margin to position relative,left, and now I can edit the padding. */
+/* To adjust everything the first version I started using margin, somehow I couldn't do the padding for the borders in the future section, 
+I changed everything from margin to position relative,left, and now I can edit the padding. #changes; as I added the position reLative my screen 
+was wider to the right and added automatically more background color, I changed it now from position absolute to padding-left.*/
 
-/* * {  
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-}  */
 
 /* body {  
     background-image: linear-gradient(to right, beige 0%, beige 30%, hsl(164, 61%, 65%) 50%, hsl(164, 61%, 65%) 100% )
@@ -94,7 +90,6 @@ h1 {
  }
 
 #flex { 
-    /* tried to add margin-top:40px to be consistend but it doesen't work, added margin-bottom:40px in .future instead */
     border-style: solid;
     border-width: 3px;
     border-color:hsl(240, 33%, 77%) ; 
@@ -162,15 +157,15 @@ div img {
 }
 
 a {
-    background-image: linear-gradient(
+    background-image: linear-gradient( 
       to right,
       #54b3d6,
       #54b3d6 50%,
       #000 50%
-    );
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
+    ); 
+    background-size: 200% 100%; 
+    background-position: -100%; 
+    display: inline-block; 
     padding-top: 20px;
     padding-left: 25px;
     padding-bottom: 15px;
@@ -192,10 +187,20 @@ a {
     transition: all 0.3s ease-in-out;
   }
   
-  a:hover {
+   a:hover { 
    background-position: 0;
-  }
+  } 
   
   a:hover::before {
     width:100%;
+  }
+
+  .hover {
+    background-color: #000;
+    display: none;
+    border: solid 4px;
+    padding: 8px;
+  }
+  img:hover + h1 {
+  display: inline;
   }
